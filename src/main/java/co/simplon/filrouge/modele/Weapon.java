@@ -41,7 +41,7 @@ public class Weapon implements Serializable {
     @UpdateTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "update_date")
-    private Date uptdateDate;
+    private Date updateDate;
 
     @ManyToMany(fetch = FetchType.LAZY,
             cascade = {
