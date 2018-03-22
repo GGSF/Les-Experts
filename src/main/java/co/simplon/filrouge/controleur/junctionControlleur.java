@@ -1,6 +1,10 @@
 package co.simplon.filrouge.controleur;
 
 
+import co.simplon.filrouge.modele.Photo;
+import co.simplon.filrouge.modele.PieceOfEvidence;
+import co.simplon.filrouge.modele.PoliceCase;
+import co.simplon.filrouge.repository.*;
 import co.simplon.filrouge.service.PeopleLinkService;
 import co.simplon.filrouge.service.PieceLinkService;
 import co.simplon.filrouge.service.VehiculeLinkService;
@@ -10,6 +14,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @CrossOrigin
@@ -78,5 +84,85 @@ public class junctionControlleur {
         }
 
         return ResponseEntity.status(HttpStatus.OK).body(null);
+    }
+
+    @Autowired
+    private CaseByVehiculeJDBC caseByVehicule;
+
+    @RequestMapping(value = "/case_vehicule/{idVehicule}", method = RequestMethod.GET)
+    public ResponseEntity<?> listCase(@PathVariable Long idVehicule ){
+        List<PoliceCase> policeCases = null;
+        try {
+
+            policeCases = caseByVehicule.listCases(idVehicule );
+
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(policeCases);
+    }
+
+    @Autowired
+    private CaseByPeopleJDBC caseByPeople;
+
+    @RequestMapping(value = "/case_people/{idPeople}", method = RequestMethod.GET)
+    public ResponseEntity<?> listCaseByPeople(@PathVariable Long idPeople ){
+        List<PoliceCase> policeCases = null;
+        try {
+
+            policeCases = caseByPeople.listCases(idPeople );
+
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(policeCases);
+    }
+
+    @Autowired
+    private CaseByPhotoJDBC caseByPhoto;
+
+    @RequestMapping(value = "/case_photo/{idPhoto}", method = RequestMethod.GET)
+    public ResponseEntity<?> listCaseByPhoto(@PathVariable Long idPhoto ){
+        List<PoliceCase> policeCases = null;
+        try {
+
+            policeCases = caseByPhoto.listCases(idPhoto );
+
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(policeCases);
+    }
+
+    @Autowired
+    private CaseByUserJDBC caseByUser;
+
+    @RequestMapping(value = "/case_user/{idUser}", method = RequestMethod.GET)
+    public ResponseEntity<?> listCaseByUser(@PathVariable Long idUser ){
+        List<PoliceCase> policeCases = null;
+        try {
+
+            policeCases = caseByUser.listCases(idUser );
+
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(policeCases);
+    }
+
+    @Autowired
+    private CaseByPieceJDBC caseByPieceJDBC;
+
+    @RequestMapping(value = "/case_piece/{idPiece}", method = RequestMethod.GET)
+    public ResponseEntity<PoliceCase> getPhotoById(@PathVariable(value = "id") Long pieceId) {
+        PoliceCase policeCase = caseByPieceJDBC.getCaseByPiece(PoliceCase, pieceId);
+        if(policeCase == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok().body(policeCase);
     }
 }
