@@ -47,11 +47,10 @@ public class Vehicule implements Serializable {
     @UpdateTimestamp
     @Temporal( TemporalType.TIMESTAMP )
     @Column( name = "update_date" )
-<<<<<<< HEAD
-    private Date updateDate;
-=======
+
+
     private Date upDateDate;
->>>>>>> dfaf78968607295c718c18c26120f9f34728a8c8
+
 
    
     @ManyToMany( fetch = FetchType.LAZY,

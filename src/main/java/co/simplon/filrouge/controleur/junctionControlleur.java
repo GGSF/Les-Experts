@@ -154,15 +154,6 @@ public class junctionControlleur {
         return ResponseEntity.status(HttpStatus.OK).body(policeCases);
     }
 
-    @Autowired
-    private CaseByPieceJDBC caseByPieceJDBC;
 
-    @RequestMapping(value = "/case_piece/{idPiece}", method = RequestMethod.GET)
-    public ResponseEntity<PoliceCase> getPhotoById(@PathVariable(value = "id") Long pieceId) {
-        PoliceCase policeCase = caseByPieceJDBC.getCaseByPiece(PoliceCase, pieceId);
-        if(policeCase == null) {
-            return ResponseEntity.notFound().build();
-        }
-        return ResponseEntity.ok().body(policeCase);
-    }
+
 }
