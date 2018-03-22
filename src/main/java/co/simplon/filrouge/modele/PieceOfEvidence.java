@@ -22,7 +22,7 @@ public class PieceOfEvidence implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private long id;
 
     @Column
     private String type;
@@ -39,9 +39,6 @@ public class PieceOfEvidence implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "update_date")
     private Date uptdateDate;
-
-
-
 
 
 }

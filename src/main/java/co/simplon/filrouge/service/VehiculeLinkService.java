@@ -11,6 +11,6 @@ public class VehiculeLinkService {
     private VehiculeLinkDAO dao;
 
     public void deleteLinkVehicule(Long idCase, Long idVehicule) throws Exception {
-        dao.deleteLinkVehicule(idCase,idVehicule );
+        dao.deleteLinkVehicule(idCase, idVehicule);
     }
 }
