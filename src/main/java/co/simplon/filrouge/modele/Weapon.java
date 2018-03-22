@@ -41,8 +41,13 @@ public class Weapon implements Serializable {
     @UpdateTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "update_date")
-    private Date uptdateDate;
+    private Date updateDate;
 
+    // @ManyToMany : l'entité esclave doit préciser un champ retour par une annotation
+    // fetch : permet de surcharger le type de récupération pour une requête particulière
+    // cascade : Cascade attribute is mandatory, when ever we apply relationship
+    // between objects, cascade attribute transfers operations done on one object onto its related child objects
+    // mappedBy : référence le champ qui porte la relation côté maître
     @ManyToMany(fetch = FetchType.LAZY,
             cascade = {
                     CascadeType.PERSIST,

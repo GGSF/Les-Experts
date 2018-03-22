@@ -22,7 +22,6 @@ import java.util.regex.Pattern;
 public class SearchControleur {
 
 
-
         @Autowired
         private PoliceCaseRepository repo;
 
@@ -58,5 +57,5 @@ public class SearchControleur {
         Specification<People> spec2 = builder.build();
         return repo2.findAll(spec2);
     }
-    }
+  }
 

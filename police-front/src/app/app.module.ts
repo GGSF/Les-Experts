@@ -41,6 +41,7 @@ import { TableCrudPersonneComponent } from './table-crud-personne/table-crud-per
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

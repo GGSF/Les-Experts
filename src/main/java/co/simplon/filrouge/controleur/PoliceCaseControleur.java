@@ -1,14 +1,14 @@
 package co.simplon.filrouge.controleur;
 
 
-        import co.simplon.filrouge.modele.PoliceCase;
-        import co.simplon.filrouge.repository.PoliceCaseRepository;
-        import org.springframework.beans.factory.annotation.Autowired;
-        import org.springframework.http.ResponseEntity;
-        import org.springframework.web.bind.annotation.*;
+import co.simplon.filrouge.modele.PoliceCase;
+import co.simplon.filrouge.repository.PoliceCaseRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
-        import javax.validation.Valid;
-        import java.util.List;
+import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @CrossOrigin
