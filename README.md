@@ -15,7 +15,7 @@ Mode opératoire :
 1 - Installer JDK dans un IDE (par exemple, Eclipse)  
 2 - Installer Apache Maven  
 3 - Installer SQL server (à travers MySQL Workbench par exemple)  
-4 - Vérifier si des mises à jour sont disponibles our ces différents composants  
+4 - Vérifier si des mises à jour sont disponibles pour ces différents composants  
 5 - Importer le projet sous l'IDE    
 
 Personnellement, j'ai particulièrement travaillé sur la partie UML, design (mokup, CSS) et "arme" du projet
