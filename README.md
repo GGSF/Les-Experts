@@ -16,8 +16,9 @@ Mode opératoire :
 2 - Installer Apache Maven  
 3 - Installer SQL server (à travers MySQL Workbench par exemple)  
 4 - Vérifier si des mises à jour sont disponibles our ces différents composants  
+5 - Importer le projet sous l'IDE    
 
-Personnellement, j'ai travaillé sur la partie "arme" du projet
+Personnellement, j'ai particulièrement travaillé sur la partie UML, design (mokup, CSS) et "arme" du projet
 
 Créer la partie back de l'application :
 
@@ -130,6 +131,4 @@ Créer la partie back de l'application :
 
 
 
-5 - Importer le projet sous l'IDE  
-6 - Lancer le projet (clic D, puis "Run AS" et "Spring Boot App"    
 
