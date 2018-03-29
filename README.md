@@ -1,6 +1,6 @@
 Projet Fil Rouge
 
-Equipe GGSF
+Conçu et réalisé par l'équipe GGSF (Gérome Gilles Stéphan Frédéric)
 
 Partie Back 
 
