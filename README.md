@@ -10,14 +10,14 @@ Pré-requis :
 - Apache Maven : 3.5.2
 - SQL server : 5.6
 
-Mode opératoir :
+Mode opératoire :
 
 1 - Installer JDK dans un IDE (par exemple, Eclipse)  
 2 - Installer Apache Maven  
 3 - Installer SQL server (à travers MySQL Workbench par exemple)  
 4 - Vérifier si des mises à jour sont disponibles our ces différents composants  
 
-Personnellement, j'ai travaillé sur la partie "arme"
+Personnellement, j'ai travaillé sur la partie "arme" du projet
 
 Créer la partie back de l'application :
 
@@ -32,6 +32,7 @@ Créer la partie back de l'application :
 
 - créer les classes java, en lien avec Spring et Hiberbate :
 
+
 => modèle : cette classe permet de créer et nommer une table, ainsi que ses champs et leurs caractéristiques (nom, non null, clé primaire, ...)
 
 => DAO : interface, qui va permettre ici de supprimer le lien qu'un objet peut avoir entre 2 tables (mais sans toucher à l'objet même)
@@ -43,6 +44,7 @@ Créer la partie back de l'application :
 => JDBC : instruction SQL déjà compilée (plus sécurisée), pour ici supprimer le lien qu'un objet peut posseder entre 2 tables
 
 => service :
+
 
 - pour démarrer l'application, il suffira de lancer, sur la classe Main, un "Run As", puis de choisir "Spring boot app"
 
