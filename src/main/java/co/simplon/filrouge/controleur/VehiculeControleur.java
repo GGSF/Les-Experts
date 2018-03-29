@@ -48,7 +48,10 @@ public class VehiculeControleur {
         if(vehicule == null) {
             return ResponseEntity.notFound().build();
         }
-        vehicule.setMarque (vehiculeDetail.getMarque ());
+        vehicule.setMarque (vehiculeDetail.getMarque());
+        vehicule.setModel(vehiculeDetail.getModel());
+        vehicule.setColor(vehiculeDetail.getColor());
+        vehicule.setLicensePlate(vehiculeDetail.getLicensePlate());
 
         Vehicule updatedVehicule = vehiculeRepository.save(vehicule);
         return ResponseEntity.ok(updatedVehicule);

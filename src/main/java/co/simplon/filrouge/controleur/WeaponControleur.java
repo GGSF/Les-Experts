@@ -49,7 +49,8 @@ public class WeaponControleur {
         if(weapon == null) {
             return ResponseEntity.notFound().build();
         }
-        weapon.setModele (weaponDetail.getModele ());
+        weapon.setModele (weaponDetail.getModele());
+        weapon.setType(weaponDetail.getType());
 
         Weapon updateWeapon = weaponRepository.save(weapon);
         return ResponseEntity.ok(updateWeapon);
