@@ -13,8 +13,6 @@ public class PoliceCaseSpecificationsBuilder {
 
     private final List<SearchCriteria> params;
 
-
-
     public PoliceCaseSpecificationsBuilder() {
         params = new ArrayList<>();
     }

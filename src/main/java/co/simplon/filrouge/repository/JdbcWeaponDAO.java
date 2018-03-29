@@ -12,27 +12,30 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+// c'est un marqueur pour n'importe quelle classe qui accomplit le rôle ou le stéréotype 
+// (aussi connu comme l'Objet d'Accès de Données ou DAO) d'un dépôt
 @Repository
 public class JdbcWeaponDAO implements WeaponLinkDAO {
 
     final Logger log = LoggerFactory.getLogger(this.getClass());
     private DataSource datasource;
 
-
-        @Autowired
-        public JdbcWeaponDAO(JdbcTemplate jdbcTemplate) {
-            this.datasource = jdbcTemplate.getDataSource();
-        }
-
+    @Autowired
+    public JdbcWeaponDAO(JdbcTemplate jdbcTemplate) {
+        this.datasource = jdbcTemplate.getDataSource();
+    }
+    
+    // crée une requête pour supprimer le lien
     @Override
     public void deleteLinkWeapon(Long idCase, Long idWeapon) throws Exception {
 
         String sql = "DELETE FROM police_case_weapon WHERE police_case_id = ? AND weapon_id = ?";
 
         try (Connection connection = this.datasource.getConnection()) {
-
+        	
+        	// supprime la table de jointure (ici, arme / affaire) correspondant aux id entrés
             try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
-
+            	
                 try {
                     pstmt.setLong(1, idCase);
                     pstmt.setLong(2, idWeapon);
@@ -44,14 +47,12 @@ public class JdbcWeaponDAO implements WeaponLinkDAO {
                     int result = pstmt.executeUpdate();
                     if (result != 1) {
                         throw new Exception("id not found !");
-                    }
-                } catch (SQLException e) {
+                    	}
+                	} catch (SQLException e) {
                     LoggerFactory.getLogger("SQL Error !:" + pstmt.toString() + e);
                     throw e;
-
                 }
             }
-
         }
     }
 
@@ -64,7 +65,5 @@ public class JdbcWeaponDAO implements WeaponLinkDAO {
         sql = pstmt.toString().substring(pstmt.toString().indexOf(':') + 2);
         log.debug(sql);
     }
-
-
+    
 }
-

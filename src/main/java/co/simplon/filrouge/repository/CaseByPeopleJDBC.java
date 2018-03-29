@@ -39,7 +39,7 @@ public class CaseByPeopleJDBC {
         String sql;
         ArrayList<PoliceCase> aLlistOfCase = new ArrayList<PoliceCase>();
 
-        // Prepare the SQL query
+        // prépare le requête SQL
         sql =   "SELECT c.id\n" +
                 "FROM people AS p\n" +
                 "LEFT JOIN police_case_people AS cp ON cp.people_id  = p.id \n" +

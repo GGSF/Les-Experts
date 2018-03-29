@@ -13,20 +13,10 @@ import java.util.Date;
 @Getter
 @Setter
 @Builder
-
-// va générer un constructeur sans paramètre
 @NoArgsConstructor
-
-// crée un constructeur avec 1 avec 1 param dans chaque champ de la classe
 @AllArgsConstructor
-
-// déclare la classe comme un entity bean (ie une classe POJO persistante)
 @Entity
-
-// permet de définir le nom de la table, du catalogue et du schéma pour le mapping de votre entity bean
 @Table(name = "fingerprint")
-
-// ...
 @EntityListeners(AuditingEntityListener.class)
 
 public class FingerPrint implements Serializable {

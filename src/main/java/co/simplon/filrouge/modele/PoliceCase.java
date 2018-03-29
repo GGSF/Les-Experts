@@ -60,12 +60,16 @@ public class PoliceCase implements Serializable {
             joinColumns = { @JoinColumn(name = "police_case_id") },
             inverseJoinColumns = { @JoinColumn(name = "people_id") })
     private Set<People> people = new HashSet<> ();
+    
+    
+    
 
     @ManyToMany(fetch = FetchType.LAZY,
             cascade = {
                     CascadeType.PERSIST,
                     CascadeType.MERGE
             })
+    
     @JoinTable(name = "police_case_user",
             joinColumns = { @JoinColumn(name = "police_case_id") },
             inverseJoinColumns = { @JoinColumn(name = "user_id") })

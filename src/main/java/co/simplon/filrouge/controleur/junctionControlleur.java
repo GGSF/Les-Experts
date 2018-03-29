@@ -32,6 +32,7 @@ public class junctionControlleur {
             vehiculeLinkService.deleteLinkVehicule(idCase,idVehicule );
 
         } catch (Exception e) {
+        	
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         }
 
@@ -48,6 +49,7 @@ public class junctionControlleur {
             peopleLinkService.deleteLinkPeople(idCase,idPeople );
 
         } catch (Exception e) {
+        	
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         }
 
@@ -64,6 +66,7 @@ public class junctionControlleur {
             weaponLinkService.deleteLinkWeapon(idCase,idWeapon );
 
         } catch (Exception e) {
+        	
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         }
 
@@ -80,6 +83,7 @@ public class junctionControlleur {
             pieceLinkService.deleteLinkPiece(idCase,idPiece );
 
         } catch (Exception e) {
+        	
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         }
 
@@ -97,6 +101,7 @@ public class junctionControlleur {
             policeCases = caseByVehicule.listCases(idVehicule );
 
         } catch (Exception e) {
+        	
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         }
 
@@ -114,6 +119,7 @@ public class junctionControlleur {
             policeCases = caseByPeople.listCases(idPeople );
 
         } catch (Exception e) {
+        	
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         }
 
@@ -131,6 +137,7 @@ public class junctionControlleur {
             policeCases = caseByPhoto.listCases(idPhoto );
 
         } catch (Exception e) {
+        	
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         }
 
@@ -148,6 +155,7 @@ public class junctionControlleur {
             policeCases = caseByUser.listCases(idUser );
 
         } catch (Exception e) {
+        	
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         }
 
@@ -161,8 +169,10 @@ public class junctionControlleur {
     public ResponseEntity<PoliceCase> getPhotoById(@PathVariable(value = "id") Long pieceId) {
         PoliceCase policeCase = caseByPieceJDBC.getCaseByPiece(PoliceCase, pieceId);
         if(policeCase == null) {
+        	
             return ResponseEntity.notFound().build();
         }
+        
         return ResponseEntity.ok().body(policeCase);
     }
 }
