@@ -24,12 +24,25 @@ Mode opératoire :
 4 - Vérifier si des mises à jour sont disponibles pour ces différents composants  
 5 - Importer le projet sous l'IDE    
 
+----------
+
 Personnellement, j'ai particulièrement travaillé sur la partie UML, design (mokup, CSS) et "arme" du projet
 
 Créer la partie back de l'application :
 
-- préparer les diagrammes UML : use case, diagramme des classes, diagramme d'activité, diagramme de base
-
+- préparer les diagrammes UML : use case, diagramme des classes, diagramme d'activité, diagramme de base ...
+<p>
+  <img src=".\src\assets\images\use_case.pdf"/>
+</p>
+USE case du projet
+<p>
+  <img src=".\src\assets\images\diag_activite.pdf"/>
+</p>
+Diagramme des clases
+<p>
+  <img src=".\src\assets\images\LesExperts.jpg"/>
+</p>
+Diagramme d'activité
 
 - faire quelques maquettes d'écrans
 
