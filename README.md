@@ -36,7 +36,7 @@ Créer la partie back de l'application :
 </p>
 USE case du projet
 <p>
-  <img src=".\src\assets\images\diag_activite.pdf"/>
+  <img src=".\src\assets\images\diagramme activite.pdf"/>
 </p>
 Diagramme des clases
 <p>
