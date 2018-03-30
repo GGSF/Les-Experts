@@ -1,8 +1,14 @@
-Projet Fil Rouge
+# **Projet Fil Rouge** #
 
-Conçu et réalisé par l'équipe GGSF (Gérome Gilles Stéphan Frédéric)
 
-Partie Back 
+<p>
+  <img src=".\src\assets\images\titre-fil-rouge.png"/>
+</p>
+Conçu et réalisé par l'équipe GGSF (Gérôme Gilles Stéphan Frédéric)
+
+----------
+
+*Partie Back*
 
 Pré-requis :
 
@@ -48,87 +54,5 @@ Créer la partie back de l'application :
 
 
 - pour démarrer l'application, il suffira de lancer, sur la classe Main, un "Run As", puis de choisir "Spring boot app"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
