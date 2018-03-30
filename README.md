@@ -46,18 +46,19 @@ Créer la partie back de l'application :
 
 - faire quelques maquettes d'écrans  
 	¤ mokup du projet :
-
+<p>
+  <img src=".\src\assets\images\fil rouge - recherche - trouve affaire selectionnee.png"/>
+</p>
 
 - créer les bases de données (et les remplir) :  
 	¤ diagramme de bases :
-
+<p>
+  <img src=".\src\assets\images\Schema BDD.png"/>
+</p>
 	¤ schema.sql : possède le schéma pour créer les différentes tables de la base
 	¤ data.sql : contient un jeu de données pour remplir les bases de données  
 	
-- créer les classes java, en lien avec Spring et Hiberbate :  
-	¤ diagramme de classes :
-
-
+- créer les classes java, en lien avec Spring et Hiberbate 
 => modèle : cette classe permet de créer et nommer une table, ainsi que ses champs et leurs caractéristiques (nom, non null, clé primaire, ...)  
 
 	~ Weapon.java : permet de fixer le nom de la table et des colonnes, ainsi que les
