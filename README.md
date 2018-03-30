@@ -31,18 +31,18 @@ Personnellement, j'ai particulièrement travaillé sur la partie UML, design (mo
 Créer la partie back de l'application :
 
 - préparer les diagrammes UML : use case, diagramme des classes, diagramme d'activité, diagramme de base ...
+¤ USE case du projet :
 <p>
   <img src=".\src\assets\images\use_case.pdf"/>
 </p>
-USE case du projet
+¤ Diagramme des clases :
 <p>
   <img src=".\src\assets\images\diagramme activite.pdf"/>
 </p>
-Diagramme des clases
+¤ Diagramme des clases :
 <p>
   <img src=".\src\assets\images\LesExperts.jpg"/>
 </p>
-Diagramme d'activité
 
 - faire quelques maquettes d'écrans
 
