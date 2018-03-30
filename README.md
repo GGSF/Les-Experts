@@ -46,12 +46,14 @@ Créer la partie back de l'application :
 
 - faire quelques maquettes d'écrans  
 	¤ mokup du projet :
-i
+
 
 - créer les bases de données (et les remplir) :  
 	¤ diagramme de bases :
 
-
+	¤ schema.sql : possède le schéma pour créer les différentes tables de la base
+	¤ data.sql : contient un jeu de données pour remplir les bases de données  
+	
 - créer les classes java, en lien avec Spring et Hiberbate :  
 	¤ diagramme de classes :
 
