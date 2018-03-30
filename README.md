@@ -86,7 +86,8 @@ Créer la partie back de l'application :
 
 => service : interface pour effacer le lien entre une arme et une affaire  
 
-	~ WeaponLinkService : implémente le JdbcWeaponDAO (où elle sera @Override) pour pouvoir effacer un lien entre 2 tables
+	~ WeaponLinkService : implémente le JdbcWeaponDAO (où elle sera @Override) pour pouvoir effacer  
+	  un lien entre 2 tables
 
 
 
