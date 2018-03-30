@@ -88,4 +88,5 @@ i
 
 
 
-Pour démarrer l'application, il suffira de lancer, sur la classe Main, un "Run As", puis de choisir "Spring boot app". Il est possible de se connecter sur http://localhost:8080 pour vérifier les connexions ...
+Pour démarrer l'application, il suffira de lancer, sur la classe Main, un "Run As", puis de choisir "Spring boot app".  
+Il est possible de se connecter sur http://localhost:8080 pour vérifier les connexions ...
