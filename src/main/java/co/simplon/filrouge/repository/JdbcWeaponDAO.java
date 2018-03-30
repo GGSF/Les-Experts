@@ -33,7 +33,8 @@ public class JdbcWeaponDAO implements WeaponLinkDAO {
 
         try (Connection connection = this.datasource.getConnection()) {
         	
-        	// supprime la table de jointure (ici, arme / affaire) correspondant aux id entrés
+        	// contien une instruction SQL déjà compilées et 1 (ou plusieurs) entrée(s)
+        	// ici, va supprimer la table de jointure (ici, arme / affaire) correspondant aux id entrés
             try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
             	
                 try {
